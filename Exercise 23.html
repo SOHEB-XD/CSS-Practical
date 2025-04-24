@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Overlay Effects</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      position: relative;
+      height: 35px;
+      width: 100px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 5px;
+      background-color: #333;
+      transition: background-color 0.3s;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      z-index: 0;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn1:hover::before {
+      transform: translateY(0);
+    }
+
+    .btn2::before {
+      transform: translateY(100%);
+    }
+    .btn2:hover::before {
+      transform: translateY(0);
+    }
+
+    .btn3::before {
+      transform: translateX(-100%);
+    }
+    .btn3:hover::before {
+      transform: translateX(0);
+    }
+
+    .btn4::before {
+      transform: translateX(100%);
+    }
+    .btn4:hover::before {
+      transform: translateX(0);
+    }
+
+    .btn5::before {
+      transform: scale(0);
+    }
+    .btn5:hover::before {
+      transform: scale(1);
+    }
+
+    .btn6::before {
+      transform: scale(0) rotate(0deg);
+    }
+    .btn6:hover::before {
+      transform: scale(1) rotate(360deg);
+    }
+
+    .btn7::before {
+      transform: translate(-100%, -100%);
+    }
+    .btn7:hover::before {
+      transform: translate(0, 0);
+    }
+
+    .btn8::before {
+      transform: translate(100%, 100%);
+    }
+    .btn8:hover::before {
+      transform: translate(0, 0);
+    }
+
+    .btn9::before {
+      opacity: 0;
+      transform: none;
+      transition: opacity 0.4s ease;
+    }
+    .btn9:hover::before {
+      opacity: 1;
+    }
+
+    .btn10::before {
+      transform: rotateY(90deg);
+      transform-origin: left;
+    }
+    .btn10:hover::before {
+      transform: rotateY(0);
+    }
+
+    .btn11::before {
+      transform: rotateX(90deg);
+      transform-origin: top;
+    }
+    .btn11:hover::before {
+      transform: rotateX(0);
+    }
+
+    .btn12::before {
+      transform: scale(0);
+      opacity: 0;
+    }
+    .btn12:hover::before {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .btn13::before {
+      width: 200%;
+      height: 200%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+    }
+    .btn13:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .btn14::before {
+      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.4) 100%);
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    .btn14:hover::before {
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+<body>
+  <button class="btn btn1"><span>Button 1</span></button>
+  <button class="btn btn2"><span>Button 2</span></button>
+  <button class="btn btn3"><span>Button 3</span></button>
+  <button class="btn btn4"><span>Button 4</span></button>
+  <button class="btn btn5"><span>Button 5</span></button>
+  <button class="btn btn6"><span>Button 6</span></button>
+  <button class="btn btn7"><span>Button 7</span></button>
+  <button class="btn btn8"><span>Button 8</span></button>
+  <button class="btn btn9"><span>Button 9</span></button>
+  <button class="btn btn10"><span>Button 10</span></button>
+  <button class="btn btn11"><span>Button 11</span></button>
+  <button class="btn btn12"><span>Button 12</span></button>
+  <button class="btn btn13"><span>Button 13</span></button>
+  <button class="btn btn14"><span>Button 14</span></button>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-Gallery</title>
+    <style>
+        .img-glry{
+            padding: 10px;
+            border: 2px solid;
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            grid-template-rows: repeat(3, 170px);
+            justify-content: center;
+            gap: 10px;
+
+        }
+        img{
+            width: 300px;
+        }
+
+        .img3{
+            grid-row: 1 / span 2;
+            grid-column: 3;
+            height: 350px;
+            object-fit: cover;
+            
+        }
+
+        .img4{
+            grid-row: 2 / span 2;
+            grid-column: 1;
+            height: 350px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-glry">
+        <img class="img1" src="images/Screenshot (21).png" alt="">
+        <img class="img2" src="images/Screenshot (22).png" alt="">
+        <img class="img3" src="images/Screenshot (24).png" alt="">
+        <img class="img4" src="images/Screenshot (30).png" alt="">
+        <img class="img5" src="images/Screenshot (31).png" alt="">
+        <img class="img6" src="images/Screenshot (34).png" alt="">
+    </div>
+</body>
+</html>

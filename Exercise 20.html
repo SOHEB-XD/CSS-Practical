@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flip Card Effects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 200px;
+      perspective: 1000px;
+      margin: 30px;
+    }
+
+    .flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-front, .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: white;
+      border-radius: 10px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Horizontal Flip */
+    .horizontal .flip-inner:hover {
+      transform: rotateY(180deg);
+    }
+
+    .horizontal .flip-front {
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+    }
+
+    .horizontal .flip-back {
+      background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+      transform: rotateY(180deg);
+    }
+
+    /* Vertical Flip */
+    .vertical .flip-inner:hover {
+      transform: rotateX(180deg);
+    }
+
+    .vertical .flip-front {
+        background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee')
+    }
+
+    .vertical .flip-back {
+        background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+      transform: rotateX(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Flip Card Effects</h1>
+
+  <!-- Horizontal Flip Card -->
+  <div class="flip-card horizontal">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <p>Front Side</p>
+      </div>
+      <div class="flip-back">
+        <p>Back Side - Horizontal Flip</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vertical Flip Card -->
+  <div class="flip-card vertical">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <p>Front Side</p>
+      </div>
+      <div class="flip-back">
+        <p>Back Side - Vertical Flip</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

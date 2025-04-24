@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Page</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+.container{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FtZXJhJTIwbGVuc3xlbnwwfHwwfHx8MA%3D%3D);
+  background-size: cover;
+  background-position: center;
+
+
+}
+
+
+
+.form-box {
+  background-color: rgb(250, 250, 250);
+  width: 80%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  padding: 40px;
+  margin: 10px;
+
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+.form-box h2 {
+  text-align: center;
+  color: navy;
+}
+
+.form-box input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.register-btn {
+  background-color: navy;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-box p {
+  text-align: center;
+}
+
+.form-box a {
+  color: navy;
+  text-decoration: none;
+}
+
+.google-btn, .facebook-btn {
+  padding: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.google-btn {
+  background-color: red;
+}
+
+.facebook-btn {
+  background-color: #1877f2;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+      <form class="form-box">
+        <span class="close-btn">&times;</span>
+        <h2>REGISTER</h2>
+        <input type="text" placeholder="Username" />
+        <input type="email" placeholder="Email ID" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+        <button class="register-btn">Register</button>
+        <p>Have an account? <a href="#">Sign In</a></p>
+        <button class="google-btn">G sign up with google</button>
+        <button class="facebook-btn">f sign up with facebook</button>
+      </form>
+    
+  </div>
+</body>
+</html>
